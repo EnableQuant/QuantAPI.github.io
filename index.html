@@ -33,19 +33,19 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,12,20,0.85);backdrop-fil
 
 /* LANDING */
 .hero{position:relative;min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem;overflow:hidden}
-.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.grid-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4;z-index:0;pointer-events:none}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.15}
 .orb1{width:500px;height:500px;background:var(--blue);top:-100px;left:-150px}
 .orb2{width:400px;height:400px;background:var(--green);bottom:-80px;right:-100px}
 .chart-bg{position:absolute;bottom:0;left:0;right:0;height:200px;opacity:.12}
-.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:var(--blue);padding:6px 14px;border-radius:99px;font-size:13px;margin-bottom:1.5rem}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:var(--blue);padding:6px 14px;border-radius:99px;font-size:13px;margin-bottom:1.5rem;position:relative;z-index:1}
 .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:600;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em}
+h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:600;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em;position:relative;z-index:1}
 .grad{background:linear-gradient(135deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.subtitle{font-size:clamp(1rem,2vw,1.2rem);color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.subtitle{font-size:clamp(1rem,2vw,1.2rem);color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;position:relative;z-index:1}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1}
 .btn-primary{background:var(--blue);color:#fff;border:none;padding:12px 28px;border-radius:10px;cursor:pointer;font-family:var(--font);font-size:15px;font-weight:500;transition:all .2s}
 .btn-primary:hover{background:#2563eb;transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.3)}
 .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border);padding:12px 28px;border-radius:10px;cursor:pointer;font-family:var(--font);font-size:15px;transition:all .2s}
@@ -171,7 +171,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
         <circle cx="24" cy="14" r="2.5" fill="#10B981"/>
       </svg>
     </div>
-    QuantAPI
+    EnableQuant
   </div>
   <div class="nav-links">
     <button class="nav-btn active" onclick="showPage('landing');setActive(this)">Home</button>
@@ -271,27 +271,29 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 
   <div style="max-width:1100px;margin:0 auto;padding:3rem 2rem 0">
     <div class="cta-banner">
-      <h2>Start building with <span class="grad">QuantAPI</span></h2>
+      <h2>Start building with <span class="grad">EnableQuant</span></h2>
       <p>Join developers and quants using our APIs to power their next generation of financial tools.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <button class="btn-primary" onclick="showPage('docs');setActive(document.querySelectorAll('.nav-btn')[2])">View API Docs</button>
         <button class="btn-outline" onclick="showPage('demo');setActive(document.querySelectorAll('.nav-btn')[1])">Live Demo</button>
       </div>
+      <p style="margin-top:1.25rem;font-size:13px;color:var(--muted)">Questions? Reach us at <a href="mailto:contact@enablequant.in" style="color:var(--blue);text-decoration:none">contact@enablequant.in</a></p>
     </div>
   </div>
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-logo">QuantAPI</div>
+      <div class="footer-logo">EnableQuant</div>
       <div class="footer-links">
         <a onclick="showPage('docs');setActive(document.querySelectorAll('.nav-btn')[2])">Documentation</a>
         <a onclick="showPage('demo');setActive(document.querySelectorAll('.nav-btn')[1])">Demo</a>
         <a>Pricing</a>
         <a>Status</a>
         <a>GitHub</a>
+        <a href="mailto:contact@enablequant.in">contact@enablequant.in</a>
       </div>
     </div>
-    <div class="footer-copy">© 2025 QuantAPI Inc. — Financial Intelligence Infrastructure</div>
+    <div class="footer-copy">© 2025 EnableQuant Inc. — Financial Intelligence Infrastructure</div>
   </footer>
 </div>
 
